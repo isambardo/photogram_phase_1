@@ -1,4 +1,6 @@
       <h1>Photo Details</h1>
       <img src="<%= @display_me %>" width="720">
       <p><%= @use_this_caption %></p>
+      <a href="/photos">Back</a>
+      <a href="/delete_photo/<%= @selected_photo.to_i %>">Delete</a>
 
