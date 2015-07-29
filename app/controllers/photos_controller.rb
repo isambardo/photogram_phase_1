@@ -14,4 +14,9 @@ class PhotosController < ApplicationController
     end
   end
 
+  def destroy
+    @selected_photo = params["id"]
+    Photo.destroy("@selected_photo.to_i")
+    render("index.html.erb")
+  end
 end
