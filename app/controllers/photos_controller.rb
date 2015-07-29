@@ -25,6 +25,6 @@ class PhotosController < ApplicationController
          Photo.destroy(destroyer)
       end
     end
-    redirect_to "http://localhost:3000/photos"
+    redirect_to "/photos"
   end
 end
