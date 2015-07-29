@@ -3,6 +3,9 @@ class PhotosController < ApplicationController
     @list_of_photos = Photo.all
   end
 
+  def new_form
+  end
+
   def show
     @list_of_photos = Photo.all
     @selected_photo = params["id"]
