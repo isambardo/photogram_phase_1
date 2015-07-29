@@ -15,8 +15,13 @@ class PhotosController < ApplicationController
   end
 
   def destroy
+    @list_of_photos = Photo.all
     @selected_photo = params["id"]
-    Photo.destroy("@selected_photo.to_i")
-    render("index.html.erb")
+    @list_of_photos.each do |destroyer|
+      if @selected_photo.to_i == destroyer.id
+         Photo.destroy(destroyer)
+      end
+    end
+    redirect_to :back
   end
 end
